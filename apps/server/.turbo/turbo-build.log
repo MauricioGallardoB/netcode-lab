@@ -1,0 +1,4 @@
+
+> @netcode/server@0.1.0 build C:\Users\mauri\netcode-lab\apps\server
+> tsc -p tsconfig.json
+

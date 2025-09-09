@@ -1,0 +1,18 @@
+{
+  "name": "@netcode/server",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@netcode/protocol": "workspace:*",
+    "@netcode/sim": "workspace:*",
+    "ws": "^8.18.0",
+    "zod": "^3.23.8"
+  }
+}

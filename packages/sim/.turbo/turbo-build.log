@@ -1,0 +1,4 @@
+
+> @netcode/sim@0.1.0 build C:\Users\mauri\netcode-lab\packages\sim
+> tsc -p tsconfig.json
+

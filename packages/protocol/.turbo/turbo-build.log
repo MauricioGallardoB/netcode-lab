@@ -1,0 +1,4 @@
+
+> @netcode/protocol@0.1.0 build C:\Users\mauri\netcode-lab\packages\protocol
+> tsc -p tsconfig.json
+

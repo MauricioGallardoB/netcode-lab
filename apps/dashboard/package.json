@@ -1,0 +1,11 @@
+{
+  "name": "@netcode/dashboard",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo \"dashboard WIP (se implementa en Bloque 7)\"",
+    "build": "echo \"skip\"",
+    "lint": "echo \"skip\"",
+    "test": "echo \"skip\""
+  }
+}
