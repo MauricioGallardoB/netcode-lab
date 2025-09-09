@@ -1,33 +1,17 @@
-# Netcode Lab (Monorepo)
+# Netcode Lab — Servidor autoritativo + Client-Side Prediction
 
-Sandbox para experimentar **client prediction**, **server reconciliation** y **lag compensation**.
+Demo minimal de **networking en tiempo real**:
+- **Servidor autoritativo** (Node/TypeScript + WebSocket) a **60 Hz**.
+- **Cliente** (Vite + TypeScript + Canvas) con **predicción local** (azul) y **reconciliación** contra el servidor (verde).
+- Auto-descubre el puerto del servidor (`8080+`), HUD muestra el puerto activo.
 
-## KPIs / SLO
+https://github.com/MauricioGallardoB/netcode-lab
 
-- p95 tick server < **5 ms** @ 100 jugadores
-- p95 error reconciliación < **0.5** unidades
-- p95 E2E (input→snapshot) < **120 ms** @60 Hz con 80 ms de RTT simulado
+---
 
-## Estructura
+## Ejecutar (modo dev)
 
-- `apps/server`: servidor autoritativo (WS)
-- `apps/client`: (WIP) cliente web (Next.js)
-- `apps/dashboard`: (WIP) panel de métricas/knobs
-- `packages/protocol`: Zod schemas, tipos y helpers
-- `packages/sim`: física determinista y utilidades
-- `load-tests/k6`: escenarios de carga
-- `infra`: docker/compose
-- `docs`: ADRs/resultados
-
-## Cómo correr (local)
-
+### Opción 1 — Un solo comando (recomendado)
 ```bash
-pnpm install
-pnpm build
-# En Git Bash / WSL:
-PORT=8080 pnpm --filter @netcode/server dev
-# En CMD:
-set PORT=8080 && pnpm --filter @netcode/server dev
-```
+pnpm start
 
-Si 8080 está ocupado, el server probará 8081, 8082, ... (auto-retry).

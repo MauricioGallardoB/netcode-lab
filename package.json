@@ -10,7 +10,8 @@
     "lint": "eslint . --ext .ts,.tsx",
     "format": "prettier --write .",
     "test": "vitest --run",
-    "prepare": "husky"
+    "prepare": "husky",
+    "start": "pnpm dev"
   },
   "lint-staged": {
     "*.{ts,tsx,js,json,md,yml,yaml}": [
